@@ -1,0 +1,3 @@
+    ModelName            Transformation during testing                   Experiment name (model)             MAE (L1Loss)    95-th percentile    RMSE (MSELoss)
+--  -------------------  ----------------------------------------------  --------------------------------  --------------  ------------------  ----------------
+ 1  0_v2/checkpoint.pth  ('CenterSubcarriers()', 'NormalizeMaxValue()')  KUL_NLOS_w_aug_R28k_B256_E100_v2         413.083              821.78           456.582
