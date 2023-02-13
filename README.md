@@ -7,9 +7,9 @@ This repository comprises of the necessary code to reproduce results in the pape
 ### System Model
 An illustration of the system model for co-located massive MIMO is shown below.
 
-
-![](assets/System_model_SSL2022_v4.jpg)
-
+<p align="center">
+  <img src="assets/System_model_SSL2022_v4.jpg" width="350" height="200"/>
+</p>
 
 ### Cite
 ```
@@ -43,13 +43,13 @@ Two sample sets from the KUL-LAB-NLOS dataset are provided to test the codes and
 - A sample set with approximately $\mathbf{28\,000}$ samples. Download channel samples from [kuluwen_URA_lab_nLoS_CSI_28k](https://owncloud.tuwien.ac.at/index.php/s/JymbpaW4aKwP5nG/download) and labels from [kuluwen_URA_lab_nLoS_LOC_28k](https://owncloud.tuwien.ac.at/index.php/s/JymbpaW4aKwP5nG/download). Set these vales in `config.json` for the keys `sub_dataset_to_use` and `sub_loc_dataset_to_use`. Place the datasets in a subfolder and set the name of subfolder in `config.json` for the key `saved_dataset_path`.
 - Same processing steps for KUL-LOS-ULA and KUL-LOS-DIS.
 
-Datasets obtained obtained in a laboratory environment with varying antenna configurations and propagation characteristics.
-
-![](assets/KUL_Scenarios.jpg)
+<p align="center"><img src="assets/KUL_Scenarios.jpg" class="center" width="500" height="200"></p>
 
 #### S and HB datasets
 Two different :train2: scenarios are modelled for the S and HB datasets. 
-![](assets/S_and_HB_scenarios_2.jpg)
+
+<p align="center"><img src="assets/S_and_HB_scenarios_2.jpg" class="center" width="700" height="300"></p>
+
 - Download dataset for [S-Scenario](https://owncloud.tuwien.ac.at/index.php/s/JymbpaW4aKwP5nG/download). S-200 dataset details [⏭️](https://mcg-deep-wrt.netlify.app/deep-wrt/s-scenario/).
 - Download dataset for [HB-Scenario](https://owncloud.tuwien.ac.at/index.php/s/bkPRLaa3y3t4pjj/download). HB-200 dataset details [⏭️](https://mcg-deep-wrt.netlify.app/deep-wrt/hb-scenario/).
 
@@ -58,7 +58,7 @@ Two different :train2: scenarios are modelled for the S and HB datasets.
 
 #### Linear Location Esitmation 
 | Iterations_model (data regime) | ↓ MAE [mm] | ↓ 95-th percentile [mm] |
-|------------------------|-------------------------------|-------------|-----------------|---------------|
+|--------------------------------|------------|-------------------------|
 | 05400_w_aug_iterations (1k) |  461.039 | 916.478 | 
 | 05400_w_aug_iterations (5k) |  402.631 | 810.78 | 
 | 05400_w_aug_iterations (10k) |  395.424 | 791.735 |
@@ -72,14 +72,14 @@ Two different :train2: scenarios are modelled for the S and HB datasets.
 #### Fine-tuner for Location Estimation
 
 | Iterations_model (data regime) | ↓ MAE [mm] | ↓ 95-th percentile [mm] |
-|------------------------|-------------------------------|-------------|-----------------|---------------|
+|--------------------------------|------------|-------------------------|
 | 05400_w_aug_iterations (1k) |  280.531 | 640.626 |
 | 05400_w_aug_iterations (5k) |  130.325 | 309.206 |
 | 05400_w_aug_iterations (10k) |  81.8767 | 182.098 |
 
 #### Fully-Supervisor for Location Estimation
 | Iterations_model (data regime) | ↓ MAE [mm] | ↓ 95-th percentile [mm] |
-|------------------------|-------------------------------|-------------|-----------------|---------------|
+|--------------------------------|-------------|------------------------|
 | 05400_w_aug_iterations (1k) |  345.489 | 747.552 |
 | 05400_w_aug_iterations (5k) |  158.137 | 373.993 |
 | 05400_w_aug_iterations (10k) |  92.8073 | 210.09 |
@@ -103,7 +103,7 @@ References [[26]](https://ieeexplore.ieee.org/document/9709990), [[30]](https://
 
 |               Other Works       |   |  
 |---------------------------------|---|
-| [RRH Selection](https://ieeexplore.ieee.org/document/9815773) | ![](/assets/RRH_Selection.gif)  |   |
-| [Uncertainty Wireless Loc](https://ieeexplore.ieee.org/document/9616218)        | ![](/assets/error_detection.gif)  |
-| Channel Subspace                | ![](/assets/channel_subspace.gif)  |
-| [Low-dimensional Representations](https://ieeexplore.ieee.org/document/9253408)        | ![](assets/low_dim_rep_loc.jpg)  |
+| [RRH Selection](https://ieeexplore.ieee.org/document/9815773) | <p align="center"><img src="assets/RRH_Selection.gif" class="center" width="150" height="120"></p> |
+| [Uncertainty Wireless Loc](https://ieeexplore.ieee.org/document/9616218)        | <p align="center"><img src="assets/error_detection.gif" class="center" width="150" height="120"></p> |
+| Channel Subspace                | <p align="center"><img src="assets/channel_subspace.gif" class="center" width="150" height="120"></p>|
+| [Low-dimensional Representations](https://ieeexplore.ieee.org/document/9253408)        | <p align="center"><img src="assets/low_dim_rep_loc.jpg" class="center" width="150" height="120"></p>  |
