@@ -29,8 +29,8 @@ Dependencies:
 - Torch: 1.10.0+cu111
 - Check other imported libraries (or use Colab).
 
-## Weights
-The weights for different trained models can be accessed by downloading from the table below. The example provided contains the weights for the model that was trained in the KUL-NLOS environment, using a full set of channel transformations.
+## Models
+The weights for different trained models can be accessed by downloading from the table below. The example provided contains the weights for the model trained on the KUL-NLOS dataset, and with the complete set of channel transformations.
 | Model | Download | 
 |------------------------|-------------------------------|
 | 10800_w_aug_iterations |  [Download from owncloud](https://owncloud.tuwien.ac.at/index.php/s/3dvqqD2WZkA5bSV/download) | 
