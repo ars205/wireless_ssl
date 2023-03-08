@@ -15,15 +15,15 @@ Results are summarized below. A more comprehensive set of results, including the
 
 | Iterations_model (data regime) | Transformation during testing | Experiment name (model) | MAE (L1Loss) | 95-th percentile | RMSE (MSELoss) |
 |------------------------|-------------------------------|--------------------------|-------------|-----------------|---------------|
-| 10800_w_aug_iterations (1k) | ('CenterSubcarriers()', 'NormalizeMaxValue()') | KUL_NLOS_w_aug_R28k_B256_E100_v2 | 449.55 | 913.876 | 498.206 |
-| 10800_w_aug_iterations (5k) | ('CenterSubcarriers()', 'NormalizeMaxValue()') | KUL_NLOS_w_aug_R28k_B256_E100_v2 | 413.083 | 821.78 | 456.582 |
-| 10800_w_aug_iterations (10k) | ('CenterSubcarriers()', 'NormalizeMaxValue()') | KUL_NLOS_w_aug_R28k_B256_E100_v2 | 405.83 | 800.334 | 449.221 |
+| model_nlos_10800 (1k) | ('CenterSubcarriers()', 'NormalizeMaxValue()') | KUL_NLOS_w_aug_R28k_B256_E100_v2 | 449.55 | 913.876 | 498.206 |
+| model_nlos_10800 (5k) | ('CenterSubcarriers()', 'NormalizeMaxValue()') | KUL_NLOS_w_aug_R28k_B256_E100_v2 | 413.083 | 821.78 | 456.582 |
+| model_nlos_10800 (10k) | ('CenterSubcarriers()', 'NormalizeMaxValue()') | KUL_NLOS_w_aug_R28k_B256_E100_v2 | 405.83 | 800.334 | 449.221 |
 -------------------------------------------------------------------------------------------------------------------------------------------------
 | Iterations_model (data regime) | Transformation during testing | Experiment name (model) | MAE (L1Loss) | 95-th percentile | RMSE (MSELoss) |
 |------------------------|-------------------------------|--------------------------|-------------|-----------------|---------------|
-| 05400_w_aug_iterations (1k) | ('CenterSubcarriers()', 'NormalizeMaxValue()') | KUL_NLOS_w_aug_R28k_B256_E100_v2 | 461.039 | 916.478 | 509.394 |
-| 05400_w_aug_iterations (5k) | ('CenterSubcarriers()', 'NormalizeMaxValue()') | KUL_NLOS_w_aug_R28k_B256_E100_v2 | 402.631 | 810.78 | 446.343 |
-| 05400_w_aug_iterations (10k) | ('CenterSubcarriers()', 'NormalizeMaxValue()') | KUL_NLOS_w_aug_R28k_B256_E100_v2 | 395.424 | 791.735 | 437.035 |
+| model_nlos_05400 (1k) | ('CenterSubcarriers()', 'NormalizeMaxValue()') | KUL_NLOS_w_aug_R28k_B256_E100_v2 | 461.039 | 916.478 | 509.394 |
+| model_nlos_05400 (5k) | ('CenterSubcarriers()', 'NormalizeMaxValue()') | KUL_NLOS_w_aug_R28k_B256_E100_v2 | 402.631 | 810.78 | 446.343 |
+| model_nlos_05400 (10k) | ('CenterSubcarriers()', 'NormalizeMaxValue()') | KUL_NLOS_w_aug_R28k_B256_E100_v2 | 395.424 | 791.735 | 437.035 |
 
 
 
@@ -35,16 +35,16 @@ Results are summarized below. A more comprehensive set of results, including the
 
 | Iterations_model (data regime) | Transformation during testing                 | Experiment name (model) | MAE (L1Loss) | 95-th percentile | RMSE (MSELoss) |
 | ---------------------- | -------------------------------------------- | ----------------------- | ------------ | ---------------- | -------------- |
-| 10800_w_aug_iterations (1k) | ('CenterSubcarriers()', 'NormalizeMaxValue()') | KUL_NLOS_w_aug_R28k_B256_E100_v2 | 295.134 | 678.368 | 323.675 |
-| 10800_w_aug_iterations (5k) | ('CenterSubcarriers()', 'NormalizeMaxValue()') | KUL_NLOS_w_aug_R28k_B256_E100_v2 | 134.088 | 308.003 | 148.895 |
-| 10800_w_aug_iterations (10k)| ('CenterSubcarriers()', 'NormalizeMaxValue()') | KUL_NLOS_w_aug_R28k_B256_E100_v2 | 73.5547 | 170.92 | 81.8537 |
+| model_nlos_10800 (1k) | ('CenterSubcarriers()', 'NormalizeMaxValue()') | KUL_NLOS_w_aug_R28k_B256_E100_v2 | 295.134 | 678.368 | 323.675 |
+| model_nlos_10800 (5k) | ('CenterSubcarriers()', 'NormalizeMaxValue()') | KUL_NLOS_w_aug_R28k_B256_E100_v2 | 134.088 | 308.003 | 148.895 |
+| model_nlos_10800 (10k)| ('CenterSubcarriers()', 'NormalizeMaxValue()') | KUL_NLOS_w_aug_R28k_B256_E100_v2 | 73.5547 | 170.92 | 81.8537 |
 
 
 | Iterations_model (data regime) | Transformation during testing                 | Experiment name (model) | MAE (L1Loss) | 95-th percentile | RMSE (MSELoss) |
 | ---------------------- | -------------------------------------------- | ----------------------- | ------------ | ---------------- | -------------- |
-| 05400_w_aug_iterations (1k) | ('CenterSubcarriers()', 'NormalizeMaxValue()') | KUL_NLOS_w_aug_R28k_B256_E100_v2 | 280.531 | 640.626 | 308.205 |
-| 05400_w_aug_iterations (5k) | ('CenterSubcarriers()', 'NormalizeMaxValue()') | KUL_NLOS_w_aug_R28k_B256_E100_v2 | 130.325 | 309.206 | 144.706 |
-| 05400_w_aug_iterations (10k)| ('CenterSubcarriers()', 'NormalizeMaxValue()') | KUL_NLOS_w_aug_R28k_B256_E100_v2 | 81.8767 | 182.098 | 91.0124 |
+| model_nlos_05400 (1k) | ('CenterSubcarriers()', 'NormalizeMaxValue()') | KUL_NLOS_w_aug_R28k_B256_E100_v2 | 280.531 | 640.626 | 308.205 |
+| model_nlos_05400 (5k) | ('CenterSubcarriers()', 'NormalizeMaxValue()') | KUL_NLOS_w_aug_R28k_B256_E100_v2 | 130.325 | 309.206 | 144.706 |
+| model_nlos_05400 (10k)| ('CenterSubcarriers()', 'NormalizeMaxValue()') | KUL_NLOS_w_aug_R28k_B256_E100_v2 | 81.8767 | 182.098 | 91.0124 |
 
 
 
