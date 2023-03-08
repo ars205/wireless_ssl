@@ -1,0 +1,33 @@
+KUL-NLOS-URA-LAB:
+"realMax": 0.071470265481,
+"imagMax": 0.071470265481,
+"absMax": 0.0804657278138,
+
+For training: Complete set of transformations, as is.
+
+KUL-LOS-ULA-LAB:
+"realMax": 1.96484375,
+"imagMax": 1.9453125,
+"absMax": 2.11407,
+
+For training: Complete set of transformations, without Normalization of two global views.
+
+KUL-LOS-DIS-LAB:
+"realMax": 2.015625,
+"imagMax": 2.1484375,
+"absMax": 2.26824000,
+
+For training: Complete set of transformations, without Normalization of two global views.
+
+S-200:
+"realMax": 0.00019218,
+"imagMax": 0.00020084,
+"absMax": 0.00020361,
+- For training: Complete set of transformations, with (MUST) do Normalization of two global views.
+
+HB-200:
+"realMax": 0.000265611,
+"imagMax": 0.000265611,
+"absMax": 0.000272077,
+- For training: Complete set of transformations, with (MUST) do Normalization of two global views.
+
