@@ -1,0 +1,35 @@
+{   
+    "project_path": ".",
+    "experiment_name": "KUL_NLOS_w_aug_R28k_B256_E100_v2",
+    "saved_dataset_path": "/content/wireless_ssl_swit/datasets/KU_Leuven_Dataset",
+    "dataset_to_download": "URA_lab_nLoS",
+    "sub_dataset_to_use": "kuluwen_URA_lab_nLoS_CSI_28k.npy",
+    "sub_loc_dataset_to_use": "kuluwen_URA_lab_nLoS_LOC_28k.npy",
+    "realMax": 0.071470265481,
+    "imagMax": 0.071470265481,
+    "absMax": 0.0804657278138,
+
+    "train_and_val_batchsize":512,
+
+    "arg1_encoder": "targ_encoder",
+    "arg2_model_name": "wit",
+    "arg3_Nr": 64,
+    "arg4_Nc": 100,
+    "arg5_Nc_prime": 32,
+
+    "arg_classifier_k": 20,
+    "arg_classifier_c_spots": 4,
+    "pth_names_classifier":["Rand1", "model_CKP_05400", "Rand2","model_CKP_10800"],
+
+    "criterion": "MSE",
+    "device": "cuda",
+    "epochs_linear": 151,
+    "best_vloss": 0.00001,
+    "learning_rate_eval": 3e-4,
+    "pth_name_linear_tuner":"/model_CKP_10800.pth",
+    "data_regimes": ["1k","5k","10k"],
+
+    "save_results": false,
+    "save_new_models": false
+
+}
