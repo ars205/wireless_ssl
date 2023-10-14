@@ -301,6 +301,111 @@ def cosine_scheduler(base_value, final_value, epochs, niter_per_ep, warmup_epoch
     assert len(schedule) == epochs * niter_per_ep
     return schedule
 
+
+def cosine_scheduler_lr(base_value, final_value, epochs, niter_per_ep, warmup_epochs=0, start_warmup_value=0):
+    '''
+    Cosine learning rate scheduler with warmup and halving period of 50 epochs after warmup.
+
+    Args:
+        base_value: the starting learning rate
+        final_value: the final learning rate
+        epochs: the total number of epochs
+        niter_per_ep: the number of iterations per epoch
+        warmup_epochs: the number of warmup epochs
+        start_warmup_value: the starting warmup learning rate
+
+    Returns:
+        schedule: the learning rate schedule
+    '''
+    warmup_schedule = np.array([])
+    warmup_iters = warmup_epochs * niter_per_ep
+    if warmup_epochs > 0:
+        warmup_schedule = np.linspace(start_warmup_value, base_value, warmup_iters)
+
+    remaining_iters = epochs * niter_per_ep - warmup_iters
+    current_alpha_max = base_value
+    T_iters = 45 * niter_per_ep  # 50 is hardcoded for simplicity. (45 when R = 63k with B=256)
+    current_T_end_iter = T_iters  # the end of the current interval
+    
+    schedule = []
+    for t in range(remaining_iters):
+        if t == current_T_end_iter:
+            current_alpha_max /= 2
+            T_iters /= 2
+            current_T_end_iter += T_iters
+        
+        schedule_value = final_value + 0.5 * (current_alpha_max - final_value) * (1 + np.cos(np.pi * (t % T_iters) / T_iters))
+        schedule.append(schedule_value)
+    
+    schedule = np.concatenate((warmup_schedule, schedule))
+    assert len(schedule) == epochs * niter_per_ep
+    return schedule
+
+# plotting just to see the schedule
+# schedule = cosine_scheduler_lr(base_value, final_value, epochs, niter_per_ep, warmup_epochs, start_warmup_value)
+# # Plot
+# plt.figure(figsize=(10,6))
+# plt.plot(schedule)
+# plt.title('Cosine Scheduler Halved')
+# plt.xlabel('Iterations')
+# plt.ylabel('Learning Rate')
+# plt.grid(True)
+# plt.show()
+
+
+def cosine_decay_scheduler_with_reset(base_value, final_value, epochs, niter_per_ep, warmup_epochs=0, start_warmup_value=0):
+    '''
+    Cosine scheduler for weight decay and momentum encoder temperature scheduler with warmup and halving period of 50 epochs after warmup.
+
+    Args:
+        base_value: the starting value
+        final_value: the final value
+        epochs: the total number of epochs
+        niter_per_ep: the number of iterations per epoch
+        warmup_epochs: the number of warmup epochs
+        start_warmup_value: the starting warmup value
+
+    Returns:
+        schedule: the schedule
+    '''
+    warmup_schedule = np.array([])
+    warmup_iters = warmup_epochs * niter_per_ep
+    if warmup_epochs > 0:
+        warmup_schedule = np.linspace(start_warmup_value, base_value, warmup_iters)
+
+    remaining_iters = epochs * niter_per_ep - warmup_iters
+    current_alpha_max = base_value
+    T_iters = 45 * niter_per_ep  # initial interval in terms of iterations (45 when R = 63k with B=256)
+    current_T_end_iter = T_iters  # the end of the current interval
+    
+    schedule = []
+    for t in range(remaining_iters):
+        if t == current_T_end_iter:
+            current_alpha_max = (final_value + current_alpha_max) / 2
+            T_iters /= 2
+            current_T_end_iter += T_iters
+        
+        schedule_value = final_value - 0.5 * (final_value - current_alpha_max) * (1 + np.cos(np.pi * (t % T_iters) / T_iters))
+        schedule.append(schedule_value)
+    
+    schedule = np.concatenate((warmup_schedule, schedule))
+    assert len(schedule) == epochs * niter_per_ep
+    return schedule
+# # Generate the schedule
+# weight_decay_schedule = cosine_decay_scheduler_with_reset(0.994, 1.0, 500, 10,0,0)
+
+# # Average over epochs
+# epoch_avg_schedule = np.array([np.mean(weight_decay_schedule[i * 10: (i+1) * 10]) for i in range(100)])
+
+# # Plotting
+# plt.figure(figsize=(10, 6))
+# plt.plot(weight_decay_schedule)
+# plt.title('Weight Decay Schedule Averaged per Epoch')
+# plt.xlabel('Epochs')
+# plt.ylabel('WD or Momentum Encoder Temperature')
+# plt.grid(True)
+# plt.show()
+
 def bool_flag(s):
     """
     Parse boolean arguments from the command line.

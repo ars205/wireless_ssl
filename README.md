@@ -27,6 +27,7 @@ The weights for different trained models can be accessed by downloading from the
 |------------------------|-------------------------------|----|
 | model_nlos_10800 |  [Download from owncloud](https://owncloud.tuwien.ac.at/index.php/s/3dvqqD2WZkA5bSV/download) | KUL-URA-NLOS | 
 | model_nlos_05400 |  [Download from owncloud](https://owncloud.tuwien.ac.at/index.php/s/bQZ1HrZmBisfaEa/download) | KUL-URA-NLOS |
+| model_nlos_63k |  [Download](https://drive.google.com/file/d/1GWxpevuL9susuOXHSgp51wRSPigeNA64/view?usp=drive_link) | KUL-URA-NLOS |
 | model_nlos_9k_07500 |  [Download from owncloud](https://owncloud.tuwien.ac.at/index.php/s/bQZ1HrZmBisfaEa/download) | KUL-URA-NLOS (improved transferability for spot estimation) |
 | model_los_dis_01080 |  [Download](https://drive.google.com/uc?export=download&id=10Gpk_ulw1e7Gelh1CG2Frx5WczOnLkYv) | KUL-DIS-LOS |
 | model_los_dis_01800 |  [Download](https://drive.google.com/uc?export=download&id=1YryIaq_p1CPU43wDyFqHRl2GIkKtQyK) | KUL-DIS-LOS |
